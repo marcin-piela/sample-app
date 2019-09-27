@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
+import sha1 from 'crypto-js/sha1';
 
 import { LoginProps } from './Login.types';
 import useStyles from './Login.styles';
@@ -7,7 +8,6 @@ import { useAuthState, useAuthDispatch } from 'shared/hooks';
 import { LoginFormBody } from './loginForm/LoginForm.types';
 import { SET_TOKENS } from 'context/auth/authReducer/authReducer';
 import { LoginForm } from './loginForm/LoginForm';
-import sha1 from 'crypto-js/sha1';
 import logo from 'assets/images/logo.png';
 
 export const Login: React.FC<LoginProps> = ({ onSubmit }) => {
@@ -21,7 +21,7 @@ export const Login: React.FC<LoginProps> = ({ onSubmit }) => {
       password: sha1(body.password).toString(),
     });
 
-    if (!error && payload) {    
+    if (!error && payload) {
       return dispatch({
         type: SET_TOKENS,
         accessToken: payload.auth_token,
@@ -31,7 +31,7 @@ export const Login: React.FC<LoginProps> = ({ onSubmit }) => {
 
     if (payload && payload.error_token) {
       return {
-        id: `error.${payload.error_token}`
+        id: `error.${payload.error_token}`,
       };
     }
 

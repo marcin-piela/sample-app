@@ -36,11 +36,14 @@ describe('Input component', () => {
   });
 
   it('renders error', () => {
-    const { container, getByText } = render(
-      <Input input={{ ...inputProp, value: 'test', name: 'username' }} meta={{ error: 'test', touched: true }} label="username" />,
+    const { getByText } = render(
+      <Input
+        input={{ ...inputProp, value: 'test', name: 'username' }}
+        meta={{ error: 'test', touched: true }}
+        label="username"
+      />,
     );
 
     expect(getByText('test')).toBeTruthy();
   });
 });
-

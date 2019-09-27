@@ -21,7 +21,7 @@ describe('Login component', () => {
       </AuthDispatchContext.Provider>,
       {
         authState: defaultAuthState,
-      }
+      },
     );
 
     act(() => {
@@ -64,7 +64,7 @@ describe('Login component', () => {
     const onSubmit = jest.fn(async () => ({
       error: true,
       payload: {
-        error_token: 'wrongEmailOrPassword'
+        error_token: 'wrongEmailOrPassword',
       },
     }));
 

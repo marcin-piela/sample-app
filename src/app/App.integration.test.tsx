@@ -8,4 +8,3 @@ it('renders login page by default', () => {
 
   expect(getByText('Login')).toBeTruthy();
 });
-

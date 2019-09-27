@@ -9,7 +9,7 @@ export const requestAuthInterceptor = (accessToken: string) => () => async (acti
     ...action,
     headers: {
       ...action.headers,
-      'Authorization': `Bearer ${accessToken}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   };
 };

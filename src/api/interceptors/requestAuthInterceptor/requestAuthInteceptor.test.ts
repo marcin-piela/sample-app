@@ -26,7 +26,7 @@ describe('requestAuthInterceptor', () => {
       endpoint: '/foo',
       method: 'GET',
       headers: {
-        'Authorization': `Bearer token`,
+        Authorization: `Bearer token`,
       },
     });
   });
