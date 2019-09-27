@@ -32,7 +32,7 @@ export default makeStyles(theme => ({
   },
   logo: {
     maxWidth: '100%',
-    width: '320px',
+    width: '290px',
     display: 'flex',
     margin: '0 auto 32px',
     objectFit: 'contain',
