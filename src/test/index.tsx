@@ -14,7 +14,7 @@ type Options = RenderOptions & {
 const localeContext = {
   formatMessage: ({ id }: MessageDescriptor) => id,
   locale: 'en',
-  updateLocale: (locale: string) => null,
+  updateLocale: () => null,
 };
 
 const customRender = (node: ReactElement, options?: Omit<Options, 'queries'>) => {
@@ -30,4 +30,3 @@ export * from '@testing-library/react';
 export { renderHook, act as hookAct } from '@testing-library/react-hooks';
 export { customRender as render };
 export { TestingRouter } from './testingRouter/TestingRouter';
-

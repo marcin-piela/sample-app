@@ -27,6 +27,7 @@
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
+    "gh-pages": "^2.1.1",
     "lint-staged": "^9.4.0",
     "prettier": "^1.18.2",
     "react-scripts": "3.1.2",
@@ -40,9 +41,12 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "lint-fix": "npm run lint -- --fix",
-    "pre-commit": "npm run lint; npm run lint:css",
-    "translations": "babelsheet generate --path ./src/locale"
+    "pre-commit": "npm run lint",
+    "translations": "babelsheet generate --path ./src/locale",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
+  "homepage": "https://marcin-piela.github.io/sample-app",
   "eslintConfig": {
     "extends": "react-app"
   },

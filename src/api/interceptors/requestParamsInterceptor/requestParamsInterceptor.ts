@@ -6,7 +6,7 @@ export const requestParamsInterceptor = () => async (action: Action) => {
   }
 
   const queryParams = Object.entries(action.params)
-    .filter(([key, val]) => val !== undefined)
+    .filter(([val]) => val !== undefined)
     .map(([key, val]) => (Array.isArray(val) ? `${key}=${val.join(',')}` : `${key}=${val}`))
     .join('&');
 

@@ -2,11 +2,7 @@ import React, { useMemo } from 'react';
 import { ClientContextProvider, createClient } from 'react-fetching-library';
 
 import { ClientProviderProps } from './ClientContextController.types';
-import {
-  requestHostInterceptor,
-  requestParamsInterceptor,
-  requestNoCacheInterceptor,
-} from 'api/interceptors';
+import { requestHostInterceptor, requestParamsInterceptor, requestNoCacheInterceptor } from 'api/interceptors';
 
 export const ClientContextController: React.FC<ClientProviderProps> = ({ children }) => {
   const client = useMemo(() => {

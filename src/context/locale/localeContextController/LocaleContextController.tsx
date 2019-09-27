@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { IntlProvider } from 'react-intl';
 
-import { LocaleContextProvider } from '..';
-
 import { LocaleContextControllerProps } from './LocaleContextController.types';
+
+import { LocaleContextProvider } from '..';
 
 export const LocaleContextController: React.FC<LocaleContextControllerProps> = ({
   children,
