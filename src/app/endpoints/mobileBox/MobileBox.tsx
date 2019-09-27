@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-import { EndpointsProps, EndpointsItemProps } from "../Endpoints.types";
+import { EndpointsProps } from "../Endpoints.types";
 import { useLocale } from "shared/hooks";
 import { Paper, Icon, Tooltip } from "@material-ui/core";
 import useStyles from "./MobileBox.styles";
