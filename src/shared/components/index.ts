@@ -11,4 +11,9 @@ export {
   FormControlLabel,
   Radio,
   Typography,
+  Toolbar,
+  Fab,
 } from '@material-ui/core';
+
+export { Layout } from './layout/Layout';
+export { Header } from './header/Header';
