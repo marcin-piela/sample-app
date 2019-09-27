@@ -1,1 +1,1 @@
-{"header":{"links":{"logout":"Logout"}},"login":{"email":"Email","password":"Password"}}
+{"header":{"links":{"logout":"Logout"}},"login":{"email":"Email","password":"Password"},"endpoints":{"title":"Endpoints","label":{"id":"ID","endpoint_status":"Endpoint Status","name":"Name","iccid":"ICCID","msisdn":"MSISDN","ip":"IP","imei":"IMEI","service_profile":"Service Profile","tariff_profile":"Tariff Profile"}}}
