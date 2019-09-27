@@ -1,11 +1,11 @@
-import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import React from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
-import { AppProviders } from "app/providers/AppProviders";
-import { Logout } from "./logout/Logout";
-import { AppProps } from "./App.types";
-import { LoginContainer } from "./login/LoginContainer";
-import { EndpointsContainer } from "./endpoints/Endpoints.container";
+import { AppProviders } from 'app/providers/AppProviders';
+import { Logout } from './logout/Logout';
+import { AppProps } from './App.types';
+import { LoginContainer } from './login/LoginContainer';
+import { EndpointsContainer } from './endpoints/Endpoints.container';
 
 export const App: React.FC<AppProps> = () => (
   <AppProviders>
