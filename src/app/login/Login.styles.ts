@@ -1,5 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
-import city from 'assets/images/city.jpg';
+import city from 'assets/images/cave.jpg';
 
 
 export default makeStyles(theme => ({
