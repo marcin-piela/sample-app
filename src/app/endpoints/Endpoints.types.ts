@@ -1,6 +1,6 @@
 export type EndpointsProps = {
   items: EndpointsItemProps[] | undefined;
-  error: boolean;
+  error?: boolean;
 };
 
 export type EndpointsItemProps = {
