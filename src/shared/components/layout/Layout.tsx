@@ -1,6 +1,6 @@
 import React from 'react';
-import { LayoutProps } from './Layout.types';
 
+import { LayoutProps } from './Layout.types';
 import { Grid } from 'shared/components';
 
 export const Layout: React.FC<LayoutProps> = ({ children, header }) => {
@@ -19,5 +19,5 @@ export const Layout: React.FC<LayoutProps> = ({ children, header }) => {
         </Grid>
       </Grid>
     </Grid>
-  )
-}
+  );
+};

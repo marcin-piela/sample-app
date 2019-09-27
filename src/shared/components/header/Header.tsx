@@ -1,10 +1,9 @@
 import React from 'react';
-import { HeaderProps } from './Header.types';
-
 import ExitIcon from '@material-ui/icons/ExitToApp';
-import useStyles from './Header.styles';
 
-import { AppBar, Toolbar, Typography, Button, Fab } from 'shared/components';
+import { HeaderProps } from './Header.types';
+import useStyles from './Header.styles';
+import { AppBar, Toolbar, Typography, Fab } from 'shared/components';
 
 export const Header: React.FC<HeaderProps> = ({ children }) => {
   const classes = useStyles();
@@ -20,5 +19,5 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
         </Fab>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};

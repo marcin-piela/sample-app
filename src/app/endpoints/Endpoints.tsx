@@ -7,7 +7,5 @@ import { useLocale } from 'shared/hooks';
 export const Endpoints: React.FC<EndpointsProps> = () => {
   const { formatMessage } = useLocale();
 
-  return <Layout header={<Header>{formatMessage({ id: 'endpoints.title' })}</Header>}>
-    Endpoints
-  </Layout>;
+  return <Layout header={<Header>{formatMessage({ id: 'endpoints.title' })}</Header>}>Endpoints</Layout>;
 };
