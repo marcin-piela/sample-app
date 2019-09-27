@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"header":{"links":{"logout":"Logout"}},"login":{"email":"Email","password":"Password","enterEmail":"Enter email","enterPassword":"Enter password","login":"Login"},"endpoints":{"title":"Endpoints","label":{"id":"ID","endpoint_status":"Status","name":"Name","iccid":"ICCID","msisdn":"MSISDN","ip":"IP","imei":"IMEI","service_profile":"Service Profile","tariff_profile":"Tariff Profile"}},"error":{"badCredentials":"Wrong user credentials","TooManyRequests":"Too many failed authentication requests."}}
+=======
+{"header":{"links":{"logout":"Logout"}},"login":{"email":"Email","password":"Password","enterEmail":"Enter email","enterPassword":"Enter password","login":"Login"},"endpoints":{"title":"Endpoints","label":{"id":"ID","endpoint_status":"Status","name":"Name","iccid":"ICCID","msisdn":"MSISDN","ip":"IP","imei":"IMEI","service_profile":"Service Profile","tariff_profile":"Tariff Profile"}}}
+>>>>>>> eb77c71... [US-463] Add table component with data fetching from API

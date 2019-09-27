@@ -75,5 +75,6 @@
       "npm run pre-commit",
       "git add"
     ]
-  }
+  },
+  "proxy": "https://cdn.emnify.net/api/v1/"
 }
