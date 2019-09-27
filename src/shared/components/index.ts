@@ -13,10 +13,9 @@ export {
   Toolbar,
   Fab,
   TextField,
-  IconButton
+  IconButton,
 } from '@material-ui/core';
 
 export { Layout } from './layout/Layout';
 export { Header } from './header/Header';
 export { Input } from './input/Input';
-

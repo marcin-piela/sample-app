@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ children }) => {
         <Typography variant="h6" className={classes.title}>
           {children}
         </Typography>
-        <Link to="/logout" style={{color: 'white'}}>
+        <Link to="/logout" style={{ color: 'white' }}>
           <IconButton color="inherit">
             <ExitIcon />
           </IconButton>
