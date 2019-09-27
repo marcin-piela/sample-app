@@ -13,6 +13,7 @@ export {
   Toolbar,
   Fab,
   TextField,
+  IconButton,
 } from '@material-ui/core';
 
 export { Layout } from './layout/Layout';
