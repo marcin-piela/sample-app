@@ -1,6 +1,6 @@
 import { Action } from 'api/types';
 
-export const requestNoCacheInterceptor = () => async (action: Action) => {
+export const requestAuthInterceptor = (accessToken: string) => () => async (action: Action) => {
   if (action.skipAuth) {
     return action;
   }
@@ -9,7 +9,7 @@ export const requestNoCacheInterceptor = () => async (action: Action) => {
     ...action,
     headers: {
       ...action.headers,
-      'cache-control': 'no-cache',
+      'Authorization': `Bearer ${accessToken}`,
     },
   };
 };

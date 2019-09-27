@@ -2,7 +2,6 @@
 export {
   AppBar,
   Button,
-  Input,
   Grid,
   GridList,
   Paper,
@@ -13,7 +12,9 @@ export {
   Typography,
   Toolbar,
   Fab,
+  TextField,
 } from '@material-ui/core';
 
 export { Layout } from './layout/Layout';
 export { Header } from './header/Header';
+export { Input } from './input/Input';

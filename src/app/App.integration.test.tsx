@@ -4,7 +4,8 @@ import { App } from './App';
 import { render } from 'test';
 
 it('renders login page by default', () => {
-  const { queryByText } = render(<App />);
+  const { getByText } = render(<App />);
 
-  expect(queryByText('Login page')).toBeTruthy();
+  expect(getByText('Login')).toBeTruthy();
 });
+

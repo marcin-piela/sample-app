@@ -14,7 +14,6 @@ describe('requestNoCacheInterceptor', () => {
       endpoint: '/foo',
       method: 'GET',
       headers: {
-        pragma: 'no-cache',
         'cache-control': 'no-cache',
       },
     });

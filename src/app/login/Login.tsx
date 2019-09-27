@@ -1,33 +1,58 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
-import { Grid, Paper, Typography, AppBar } from 'shared/components';
 import { LoginProps } from './Login.types';
 import useStyles from './Login.styles';
+import { useAuthState, useAuthDispatch } from 'shared/hooks';
+import { LoginFormBody } from './loginForm/LoginForm.types';
+import { SET_TOKENS } from 'context/auth/authReducer/authReducer';
+import { LoginForm } from './loginForm/LoginForm';
+import sha1 from 'crypto-js/sha1';
+import logo from 'assets/images/logo.png';
 
-export const Login: React.FC<LoginProps> = () => {
+export const Login: React.FC<LoginProps> = ({ onSubmit }) => {
   const classes = useStyles();
+  const { isAuthorized } = useAuthState();
+  const dispatch = useAuthDispatch();
+
+  const handleSubmit = async (body: LoginFormBody) => {
+    const { payload, error } = await onSubmit({
+      username: body.username,
+      password: sha1(body.password).toString(),
+    });
+
+    if (!error && payload) {    
+      return dispatch({
+        type: SET_TOKENS,
+        accessToken: payload.auth_token,
+        refreshToken: payload.refresh_token,
+      });
+    }
+
+    if (payload && payload.error_token) {
+      return {
+        id: `error.${payload.error_token}`
+      };
+    }
+
+    return {
+      id: 'error.badCredentials',
+    };
+  };
+
+  if (isAuthorized) {
+    return <Redirect to="/endpoints" />;
+  }
 
   return (
-    <>
-      <AppBar position="static">Login page</AppBar>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <Grid container justify="center">
-            {[0, 1, 2].map(value => (
-              <Grid key={value} item>
-                <Paper className={classes.root}>
-                  <Typography variant="h5" component="h3">
-                    This is a sheet of paper.
-                  </Typography>
-                  <Typography component="p">
-                    Paper can be used to build surface or other elements for your application.
-                  </Typography>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
-      </Grid>
-    </>
+    <div className={classes.root}>
+      <div className={classes.leftSide} />
+      <div className={classes.rightSide}>
+        <img src={logo} alt="Logo" className={classes.logo} />
+        <div className={classes.formWrapper}>
+          <LoginForm onSubmit={handleSubmit} />
+        </div>
+      </div>
+    </div>
   );
 };
