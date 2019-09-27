@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/sample-app/static/js/main.e2baa0f3.chunk.js",
+    "main.js.map": "/sample-app/static/js/main.e2baa0f3.chunk.js.map",
+    "runtime-main.js": "/sample-app/static/js/runtime-main.4fe6d463.js",
+    "runtime-main.js.map": "/sample-app/static/js/runtime-main.4fe6d463.js.map",
+    "static/js/2.e71a02f1.chunk.js": "/sample-app/static/js/2.e71a02f1.chunk.js",
+    "static/js/2.e71a02f1.chunk.js.map": "/sample-app/static/js/2.e71a02f1.chunk.js.map",
+    "index.html": "/sample-app/index.html",
+    "precache-manifest.d3c4c439a5c1eeabab7fcd9ab6af6721.js": "/sample-app/precache-manifest.d3c4c439a5c1eeabab7fcd9ab6af6721.js",
+    "service-worker.js": "/sample-app/service-worker.js",
+    "static/media/cave.jpg": "/sample-app/static/media/cave.d6212e54.jpg",
+    "static/media/logo.png": "/sample-app/static/media/logo.abc3a6da.png"
+  }
+}
