@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import flatten from 'flat';
 import { ThemeProvider } from '@material-ui/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -17,7 +17,7 @@ export const AppProviders: React.FC<Props> = ({ children }) => (
     <ClientContextController>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Router>{children}</Router>
+        <Router basename="/">{children}</Router>
       </ThemeProvider>
     </ClientContextController>
   </LocaleContextController>
