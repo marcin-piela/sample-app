@@ -1,5 +1,6 @@
 export type EndpointsProps = {
   items: EndpointsItemProps[] | undefined;
+  isLoading?: boolean;
   error?: boolean;
 };
 

@@ -14,6 +14,14 @@ export {
   Fab,
   TextField,
   IconButton,
+  Table,
+  TableHead,
+  TableRow,
+  TableBody,
+  Container,
+  Icon,
+  Tooltip,
+  CircularProgress,
 } from '@material-ui/core';
 
 export { Layout } from './layout/Layout';
