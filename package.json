@@ -11,7 +11,7 @@
     "crypto-js": "^3.1.9-1",
     "final-form": "^4.18.5",
     "@types/react-responsive": "^8.0.0",
-    "flat": "^4.1.0",
+    "flat": "^5.0.1",
     "js-cookie": "^2.2.1",
     "jwt-decode": "^2.2.0",
     "react": "^16.9.0",
